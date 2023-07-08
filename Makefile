@@ -6,7 +6,7 @@ format:
 	black *.py
 
 lint:
-	pylint --disable=R,C,W1203,E1101,W1514 api.py
+	pylint --disable=R,C,W1203,E1101,W1514 *.py
 
 run:
 	python api.py	
