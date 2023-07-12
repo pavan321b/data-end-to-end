@@ -9,7 +9,13 @@
         "headline": "Nvidia knocks down concern over AI chip exports to China. The reason is why we own the stock",
         "url": "https://www.cnbc.com/2023/06/28/nvidia-knocks-down-concern-over-ai-chip-exports-to-china.html",
         "shortDateFirstPublished": "06/28/2023",
-        "Text": "Nvidia (NVDA) on Wednesday reassured investors that potential export restrictions on chips wouldn't hurt the semiconductor firm's bottom line \u2014 reaffirming our view that the Club name is an \"own it, don't trade it\" stock."
+        "Text": "Nvidia (NVDA) on Wednesday reassured investors that potential export restrictions on chips wouldn't hurt the semiconductor firm's bottom line \u2014 reaffirming our view that the Club name is an \"own it, don't trade it\" stock.",
+        "sentiment_score": [
+            {
+                "label": "Positive",
+                "score": 0.9999589920043945
+            }
+        ]
     },
     "3": {
         "headline": "States are paying huge sums to lure chip makers, on top of federal billions",
@@ -33,12 +39,24 @@
         "headline": "AMD's new A.I. chip won't be enough to knock Nvidia off its throne",
         "url": "https://www.cnbc.com/2023/06/14/amd-new-ai-chip-not-enough-to-knock-nvidia-off-its-throne.html",
         "shortDateFirstPublished": "06/14/2023",
-        "Text": "Advanced Micro Devices (AMD) has now showcased its new artificial intelligence chip \u2014 but it's unlikely to dethrone fellow Club-holding Nvidia (NVDA) as the dominant semiconductor firm in the burgeoning field of artificial intelligence."
+        "Text": "Advanced Micro Devices (AMD) has now showcased its new artificial intelligence chip \u2014 but it's unlikely to dethrone fellow Club-holding Nvidia (NVDA) as the dominant semiconductor firm in the burgeoning field of artificial intelligence.",
+        "sentiment_score": [
+            {
+                "label": "Positive",
+                "score": 0.8317527770996094
+            }
+        ]
     },
     "7": {
         "headline": "Cramer says snap up this leading medtech stock \u2014 wishes he could buy shares too",
         "url": "https://www.cnbc.com/2023/06/08/cramer-says-buy-ge-healthcare-on-the-dip-wishes-he-could.html",
         "shortDateFirstPublished": "06/08/2023",
-        "Text": "GE Healthcare (GEHC) shares are sliding Thursday, giving Club members an opportunity to invest in the medical-technology company at an increasingly attractive valuation. The sellers Thursday are making a mistake, and we would capitalize on their misjudgment if not for restrictions that prevent us from trading the stock."
+        "Text": "GE Healthcare (GEHC) shares are sliding Thursday, giving Club members an opportunity to invest in the medical-technology company at an increasingly attractive valuation. The sellers Thursday are making a mistake, and we would capitalize on their misjudgment if not for restrictions that prevent us from trading the stock.",
+        "sentiment_score": [
+            {
+                "label": "Positive",
+                "score": 0.710537314414978
+            }
+        ]
     }
 }
