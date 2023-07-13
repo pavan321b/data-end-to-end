@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Indented Bullet Points</title>
+    <style>
+        ul {
+            margin-left: 20px;
+        } 
+        
+        ul ul {
+            margin-left: 20px;
+        }
+
+        li {
+            list-style-type: disc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Latest Analysis</h1>
+    <ul>
+        
+        {% for key, value in news_items.items()%}
+        <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+        
+    </ul>
+    
+    
+</body>
+</html>
