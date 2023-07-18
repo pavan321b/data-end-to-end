@@ -1,0 +1,13 @@
+ * Serving Flask app 'api'
+ * Debug mode: off
+Comapnies:  ['TSLA', 'NVDA', 'INTC', 'GOOGL', 'AMD']
+Company in search: TSLA
+File Already Exists for TSLA
+Company in search: NVDA
+File Already Exists for NVDA
+Company in search: INTC
+File Already Exists for INTC
+Data is old
+Company in search: GOOGL
+File Already Exists for GOOGL
+Company in search: AMD

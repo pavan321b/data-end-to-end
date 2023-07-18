@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Checkbox Form</title>
+    <title>Stock Selection Form</title>
+    <script>
+        function selectAllCheckboxes() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var selectAllCheckbox = document.getElementById("selectAllCheckbox");
+            var selectAllChecked = selectAllCheckbox.checked;
+
+            checkboxes.forEach(function(checkbox) {
+                checkbox.checked = selectAllChecked;
+            });
+        }
+    </script>
 </head>
 <body>
     <form action="/" method="post">
+        <input type="checkbox" id="selectAllCheckbox" onchange="selectAllCheckboxes()"> Select All<br>
+
         <label for="tesla">Tesla</label>
         <input type="checkbox" id="tesla" name="company" value="Tesla"><br>
 
@@ -14,8 +27,11 @@
         <label for="intel">Intel</label>
         <input type="checkbox" id="intel" name="company" value="Intel"><br>
 
-        <label for="TSMC">TSMC</label>
-        <input type="checkbox" id="TSMC" name="company" value="TSMC"><br>
+        <label for="Google">Google</label>
+        <input type="checkbox" id="Google" name="company" value="Google"><br>
+
+        <label for="Google">AMD</label>
+        <input type="checkbox" id="AMD" name="company" value="AMD"><br>
 
         <input type="submit" value="Submit">
     </form>

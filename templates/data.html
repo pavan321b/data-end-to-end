@@ -15,13 +15,67 @@
             list-style-type: disc;
         }
     </style>
+    <style>
+        .progress-bar {
+            width: 300px;
+            height: 20px;
+            max:1;
+            background-color: #f0f0f0;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar .progress {
+            height: 100%;
+            background-color: #5cb85c;
+            width: 0;
+            transition: width 0.5s ease;
+        }
+
+        .progress-bar .progress-label {
+            color: black;
+            text-align: center;
+            line-height: 20px;
+        }
+        .progress-bar .progress-text {
+            color: black;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            line-height: 20px;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            var progressBars = document.querySelectorAll(".progress-bar .progress");
+            progressBars.forEach(function(progressBar) {
+                var width = progressBar.getAttribute("data-value");
+                progressBar.style.width = width + "%";
+            });
+        });
+    </script>
 </head>
 <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <h1>Latest Analysis</h1>
     <ul>
         
         {% for key, value in news_items.items()%}
-        <li>{{ key }}: {{ value }}</li>
+        
+        {% for keys in value['max']%}
+        <li>{{key}} : {{keys}}</li>
+        
+        {% endfor %}
+        {% for keys in value['max']%}
+        <div class="w3-light-grey w3-round" style="width: 80%;">
+            <div class="w3-container w3-green w3-center w3-round" style="width:{{value['max'][keys]}}%">
+                <div class="w3-center w3-text-black">{{value['max'][keys]}}%</div>
+            </div>
+          </div><br>
+        
+        
+        
+        {% endfor %}
         {% endfor %}
         
     </ul>
