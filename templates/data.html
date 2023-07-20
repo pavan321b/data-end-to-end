@@ -64,15 +64,18 @@
         
         {% for keys in value['max']%}
         <li>{{key}} : {{keys}}</li>
+	
         
         {% endfor %}
         {% for keys in value['max']%}
         <div class="w3-light-grey w3-round" style="width: 80%;">
             <div class="w3-container w3-green w3-center w3-round" style="width:{{value['max'][keys]}}%">
                 <div class="w3-center w3-text-black">{{value['max'][keys]}}%</div>
+                
             </div>
-          </div><br>
-        
+          </div>
+	<p>Data Last Modified: {{value['Last_modified']}}</p>
+        <br>
         
         
         {% endfor %}

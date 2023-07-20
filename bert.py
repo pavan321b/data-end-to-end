@@ -26,11 +26,14 @@ def analyse(text):
 
     output = nlp(tokenizer.decode(tokens["input_ids"]))
 
-    print("Model Out: ", output)
+    # print("Model Out: ", output)
     labels = ["Positive", "Neutral", "Negative"]
-    final_output = {output[0]["label"]: output[0]["score"]}
+    final_output = {
+        output[0]["label"]: 100 * output[0]["score"],
+        "max": {output[0]["label"]: 100 * output[0]["score"]},
+    }
     for label in labels:
         if label not in output[0].values():
-            final_output[label] = (1 - list(output[0].values())[1]) / 2
-    print("ML: ", final_output)
+            final_output[label] = (100 - list(output[0].values())[1]) / 2
+    # print("ML: ", final_output)
     return final_output

@@ -6,8 +6,11 @@ format:
 	black *.py
 
 lint:
-	pylint --disable=R,C,W1203,E1101,W1514 *.py
+	pylint --disable=R,C,W1203,E1101,W1514,W0621 *.py
 
 run:
-	python api.py -> results.log
-all: install format lint run
+	python api.py
+
+test:
+	pytest test_api.py -W 'ignore::DeprecationWarning'
+all: install format lint test run

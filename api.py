@@ -51,24 +51,30 @@ def average_scores(file):
             int(i)
             if "sentiment_score" in data[i].keys():
                 for j in data[i]["sentiment_score"].keys():
-                    avg_scores[j] += data[i]["sentiment_score"][j]
+                    if j == "max":
+                        avg_scores["max"] = data[i]["sentiment_score"]["max"]
+                    else:
+                        avg_scores[j] += data[i]["sentiment_score"][j]
                 count += 1
-            print('Count: ',count)
-            
-            
 
-        except:
-            pass
+        except ValueError:
+            avg_scores["Last_modified"] = data[i]
     try:
         for i in avg_scores.keys():
-            avg_scores[i] /= count
-            avg_scores[i] = 100*round(avg_scores[i], 6)
+            if i in ["Last_modified", "max"]:
+                pass
+            else:
+                avg_scores[i] /= count
+                avg_scores[i] = round(avg_scores[i], 6)
+        # print(avg_scores)
         return avg_scores
     except ZeroDivisionError:
-        return {"Positive": 100 / 3, "Neutral": 100 / 3, "Negative": 100 / 3}
-    
-    
-        
+        return {
+            "Positive": 100 / 3,
+            "Neutral": 100 / 3,
+            "Negative": 100 / 3,
+            "max": 100 / 3,
+        }
 
 
 def API(companies):
@@ -76,6 +82,12 @@ def API(companies):
 
     html_response = {key: {} for key in companies}
     for company in companies:
+        if not os.path.exists("Data"):
+            os.makedirs("Data")
+            print("Directory 'Data' created as it was not present")
+        else:
+            pass
+
         file_path = f"Data/{company}_news.json"
         print("Company in search:", company)
         file_exists = False
@@ -116,7 +128,7 @@ def API(companies):
     return html_response
 
 
-def data_extract(company, file_path, file_exists=True):
+def data_extract(company, file_path, file_exists=False):
     """Data extract from url or file"""
     if file_exists:
         with open(file_path, "r", encoding="UTF-8") as jsonfile:
@@ -128,7 +140,7 @@ def data_extract(company, file_path, file_exists=True):
         response = requests.get(url, headers=headers, params=querystring, timeout=10)
         print(response.status_code)
         df = pd.DataFrame.from_dict(response.json())
-        print(f"!!!!!!!!!!!!!!!!!!!!!!!!!!!{company}")
+        print(f"API called for {company}")
         print(df.head())
         with open(file_path, "w+", encoding="UTF-8") as jsonfile:
             dict_dump = {}
@@ -141,13 +153,13 @@ def data_extract(company, file_path, file_exists=True):
                             data = {parameter: i[parameter] for parameter in parameters}
 
                             data["Text"] = text_extract(i["url"])
-                            print("Length of the text: ", len(data["Text"].split(" ")))
-                            print(data["url"])
-                            if len(data["Text"].split(" ")) <512:
+                            #print("Length of the text: ", len(data["Text"].split(" ")))
+                            #print(data["url"])
+                            if len(data["Text"].split(" ")) < 512:
                                 data["sentiment_score"] = analyse(data["Text"])
-                                print(f"{data['sentiment_score']} : {data['url']}")
+                                # print(f"{data['sentiment_score']} : {data['url']}")
                             else:
-                                print(f"{company}: {data['url']}")
+                                pass  # print(f"{company}: {data['url']}")
 
                             dict_dump[f"{INDEX}"] = data
                             INDEX += 1
@@ -156,6 +168,7 @@ def data_extract(company, file_path, file_exists=True):
             dict_dump["Last_Modified"] = current_time.strftime("%m-%d-%Y %H:%M:%S")
 
             json.dump(dict_dump, jsonfile, indent=4, separators=(",", ": "))
+            print(f"Created Json file for {company}")
 
             return average_scores(dict_dump)
 
@@ -175,15 +188,7 @@ def success():
     data = [stock_names[company] for company in data]
 
     final_data = API(data)
-
-    print(final_data)
-    for i in final_data.keys():
-        final_data[i]["max"] = {
-            max(final_data[i], key=final_data[i].get): round(
-                final_data[i][max(final_data[i], key=final_data[i].get)], 3
-            )
-        }
-    print(final_data)
+    print("Data Rendered to Web Page: ", final_data)
 
     # news_items=[{'Stock_Name':} for data in final_data]
     return render_template("data.html", news_items=final_data)
@@ -198,5 +203,7 @@ def index():
     return render_template("index.html")
 
 
+# Configure the logging
+
 if __name__ == "__main__":
-    app.run()
+    app.run(port=8080)
