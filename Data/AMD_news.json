@@ -5,32 +5,13 @@
         "shortDateFirstPublished": "06/28/2023",
         "Text": "As reports swirl about potential U.S. limits on semiconductor exports to China, a small division within the sprawling U.S. Department of Commerce is taking on an outsize role.The Bureau of Industry and Security was described by Commerce Secretary Gina Raimondo in 2021 as the \"small but mighty\" agency at the center of federal national security efforts. That's especially true now, with President Joe Biden considering stricter controls on the export of powerful artificial intelligence computing chips to the world's second-largest economy.The BIS is responsible for implementing the U.S. export control regime, preventing critical high-tech and defense products from getting into the hands of the wrong companies or governments. The decisions made by the BIS about who can and can't access U.S. technology can have a major effect on corporate bottom lines.Chipmakers have already taken a hit as a result of BIS-imposed restrictions. In 2022, the BIS warned Nvidia that new licensing requirements precluded the export of the company's advanced A100 and H100 chips to China without obtaining a license from the Commerce Department, part of the Biden administration's sweeping effort to curb Chinese technological advancement.Nvidia warned in August 2022 that about $400 million in potential Chinese sales would be lost unless customers purchased \"alternative product offerings.\" Just a few months later, Nvidia began to offer a watered-down version of its flagship AI chip for the Chinese market. Dubbed the A800, its lower-end specifications exempted it from Commerce Department licensing requirements.But The Wall Street Journal reported Wednesday that even the less-powerful Nvidia offering could be restricted from export at the direction of President Biden. The BIS declined to comment on a potential tightening of export controls. Nvidia shares, which have soared 180% this year largely on AI hype, fell 2% after the WSJ story.Through its Commerce Control List, the BIS can define which product specifications require licenses to be sold overseas. The criteria can be so specific that only a handful of commercially available items apply.While the Commerce Control List isn't intended to single out any one vendor, there are very few companies that develop the kind of high-octane processors that power AI models. Nvidia and Advanced Micro Devices lead that group.If an export restriction were implemented, those companies would be responsible for ensuring their high-tech processors don't end up in the Chinese markets.In one high-profile enforcement case, the BIS took aim at hard drive manufacturer Seagate over the company's decision to continue supplying Huawei after the Chinese company was blacklisted in 2020. Seagate was fined $300 million by the government. But the financial effect was much greater, as Seagate had a $1.1 billion business in China.WATCH: Geopolitical tensions will benefit Korean memory makers",
         "sentiment_score": {
-            "Neutral": 0.9923726320266724,
-            "Positive": 0.0038136839866638184,
-            "Negative": 0.0038136839866638184
+            "Neutral": 99.23726320266724,
+            "max": {
+                "Neutral": 99.23726320266724
+            },
+            "Positive": 49.503813683986664,
+            "Negative": 49.503813683986664
         }
     },
-    "2": {
-        "headline": "Nvidia dips on report U.S. considering new A.I. chip export restrictions for China",
-        "url": "https://www.cnbc.com/2023/06/28/nvidia-dips-on-report-us-mulling-new-ai-chip-restrictions-for-china.html",
-        "shortDateFirstPublished": "06/28/2023",
-        "Text": "Shares of Nvidia and Advanced Micro Devices both fell more than 2% in early trading after The Wall Street Journal reported the federal government is weighing new restrictions on exports of sophisticated chips used in artificial intelligence computing to China.Shares of Nvidia closed down 1.8% Wednesday. AMD shares pared back earlier losses to trade slightly negative by the end of the day.The export restrictions under consideration would be imposed by the Commerce Department and would come after the U.S. government already limited the computing power of chips made for Chinese use. Nvidia and AMD had been impacted by the prior limitation.Other chipmakers also fell on the news. Marvell and Broadcom both dropped less than 1%, while Qualcomm slipped more than 2%.Nvidia responded to the earlier restrictions by building a lower-spec chip for the Chinese market. But under the new controls being considered, even that chip, the A800, would be export restricted without licensing, the Journal reported.The restrictions would also apply to companies that offer cloud-based computing solutions, the Journal reported, which have been used by some companies to skirt export controls.Competition between the U.S. and China over hardware and software technology has amplified in recent years. Cybersecurity threats from Chinese state-backed threats have been identified by top U.S. officials as one of the top national security threats facing the United States. Sensitive technology has allegedly been stolen from American companies to benefit Chinese domestic competitors, whether through outright industrial espionage or through joint-venture projects, which require American companies to partner with Chinese firms to do business within China.Against this backdrop, tightened chip export controls would likely further inflame trade tensions between the two countries. U.S. officials have tried to mitigate potential impacts, but a tightening of export controls would likely jeopardize those efforts. Gina Raimondo, who as secretary of Commerce would lead the enforcement of any export controls, met with her Chinese counterpart in Beijing earlier this year.Nvidia declined to comment, as did the Bureau of Industry and Security, which is the Commerce Department's export control unit. AMD did not immediately respond to a request for comment.Correction: The federal government is weighing further restrictions on exporting powerful computing chips to China, the kind that power AI models, The Wall Street Journal reported Tuesday. An earlier version misstated the day.",
-        "sentiment_score": {
-            "Negative": 0.6826707124710083,
-            "Positive": 0.15866464376449585,
-            "Neutral": 0.15866464376449585
-        }
-    },
-    "3": {
-        "headline": "Nvidia knocks down concern over AI chip exports to China. The reason is why we own the stock",
-        "url": "https://www.cnbc.com/2023/06/28/nvidia-knocks-down-concern-over-ai-chip-exports-to-china.html",
-        "shortDateFirstPublished": "06/28/2023",
-        "Text": "Nvidia (NVDA) on Wednesday reassured investors that potential export restrictions on chips wouldn't hurt the semiconductor firm's bottom line \u2014 reaffirming our view that the Club name is an \"own it, don't trade it\" stock.",
-        "sentiment_score": {
-            "Positive": 0.9999082088470459,
-            "Neutral": 4.589557647705078e-05,
-            "Negative": 4.589557647705078e-05
-        }
-    },
-    "Last_Modified": "07-18-2023 01:37:06"
+    "Last_Modified": "07-20-2023 22:38:01"
 }
